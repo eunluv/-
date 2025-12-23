@@ -1,2 +1,2 @@
-// This file is no longer used and can be safely ignored or deleted.
+// This file is disabled to remove all AI functionality and dependencies.
 export {};
