@@ -1,7 +1,5 @@
 {
   "name": "Extreme Recreation Timer",
-  "description": "A high-tension, visual game timer for recreation events featuring ticking sound effects, large displays, and AI-powered game ideas.",
-  "requestFramePermissions": [
-    "microphone"
-  ]
+  "description": "A high-tension, visual game timer for recreation events featuring ticking sound effects and large displays.",
+  "requestFramePermissions": []
 }

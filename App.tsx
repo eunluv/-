@@ -81,14 +81,12 @@ const App: React.FC = () => {
           : 'bg-gradient-to-tr from-sky-300 via-white to-orange-100'
     }`}>
       
-      {/* Static Background Elements for depth */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-white/50 rounded-full blur-[120px]"></div>
         <div className="absolute bottom-[0%] right-[-5%] w-[40%] h-[40%] bg-blue-200/40 rounded-full blur-[100px]"></div>
       </div>
 
       <main className="relative z-10 w-full max-w-5xl px-4 text-center mt-20">
-        {/* Progress Bar */}
         <div className="fixed top-0 left-0 w-full h-4 bg-black/5 z-50">
           <div 
             className={`h-full transition-all duration-1000 ease-linear shadow-sm ${
@@ -98,7 +96,6 @@ const App: React.FC = () => {
           />
         </div>
 
-        {/* Status Header */}
         <div className="flex flex-col items-center gap-4 mb-6">
           <div className="flex items-center gap-2 px-6 py-2 rounded-full bg-white/60 backdrop-blur-lg border border-white shadow-sm">
              <Zap size={18} className={status === TimerStatus.RUNNING ? 'text-orange-500 animate-spin-slow' : 'text-slate-400'} />
@@ -113,14 +110,12 @@ const App: React.FC = () => {
           )}
         </div>
 
-        {/* Big Timer Text */}
         <div className={`timer-font font-black select-none transition-all duration-200 ${
           isLastTen ? 'text-white scale-110' : 'text-slate-900'
         } text-[22vw] md:text-[320px] leading-none tracking-tight py-4`}>
           {formatTime(timeLeft)}
         </div>
 
-        {/* Control Center Panel */}
         <div className="mt-4 p-8 bg-white/40 backdrop-blur-2xl rounded-[60px] border border-white/60 shadow-xl inline-flex flex-col items-center gap-8 ring-1 ring-black/5">
           <div className="flex items-center gap-6 md:gap-12">
             <button 
@@ -154,7 +149,6 @@ const App: React.FC = () => {
             </button>
           </div>
 
-          {/* Volume Control */}
           <div className="flex items-center gap-5 w-full max-w-[320px] px-6 py-2 bg-white/40 rounded-full border border-white">
             <button 
                 onClick={() => setSoundEnabled(!soundEnabled)}
@@ -177,7 +171,6 @@ const App: React.FC = () => {
           </div>
         </div>
 
-        {/* Settings View */}
         {showSettings && (
           <div className="mt-12 p-10 md:p-14 bg-white/80 backdrop-blur-3xl rounded-[60px] border border-white shadow-2xl animate-in fade-in zoom-in-95 duration-300 max-w-4xl mx-auto mb-10">
             <h3 className="text-slate-400 text-xs font-black uppercase tracking-[0.5em] mb-10">Choose Duration</h3>
