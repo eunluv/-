@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Play, Pause, RotateCcw, Settings, Volume2, VolumeX, Trophy, Zap, Volume1 } from 'lucide-react';
 import { TimerStatus } from './types';
@@ -47,7 +46,8 @@ const App: React.FC = () => {
 
   const toggleTimer = () => {
     if (status === TimerStatus.IDLE || status === TimerStatus.PAUSED) {
-      audioService.playTick(0, false); // Trigger context resume
+      // Small trigger to ensure AudioContext is resumed
+      audioService.playTick(0, false).catch(() => {});
     }
     
     if (status === TimerStatus.RUNNING) {
